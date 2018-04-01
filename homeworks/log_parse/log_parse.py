@@ -62,7 +62,6 @@ def parse(
                 if stop_at and request_date > stop_at:
                     break
                 if ignore_www and url[:3] == "www":
-                    # учитываем, что если www игнорируется, то и в ignore_urls тоже неразличаем.
                     if url in ignore_urls or url[4:] in ignore_urls:
                         continue
                     url = url[4:]
